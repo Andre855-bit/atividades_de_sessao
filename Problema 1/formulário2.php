@@ -1,14 +1,3 @@
-<?php 
-
-	session_start();
-
-	$_SESSION['nome1'] = $_POST['nome'];
-	$_SESSION['idade1'] = $_POST['idade'];
-	$_SESSION['peso1'] = $_POST['peso'];
-	$_SESSION['altura1'] = $_POST['altura'];
-
-?>
-
 
 <!DOCTYPE html>
 <html>
@@ -23,16 +12,16 @@
 
 	<form action="gerenciar.php" method="post" name="infor"  name="logar" >
 
-		<h3>Persona1</h3>
+		<h3>Persona2</h3>
 
 		Nome: <br>
-		<input type="text" name="nome"><br>
+		<input type="text" name="nome1"><br>
 		Idade: <br>
-		<input type="number" name="idade"><br>
+		<input type="number" name="idade1"><br>
 		Peso: <br>
-		<input type="float" name="peso"><br>
+		<input type="float" name="peso1"><br>
 		Altura: <br>
-		<input type="float" name="altura"><br>
+		<input type="float" name="altura1"><br>
 
 		<br>
 		<br>

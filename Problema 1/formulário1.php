@@ -1,3 +1,11 @@
+<?php 
+
+	session_start();
+
+	$_SESSION['cont'] = 0;
+
+ ?>
+
 <!DOCTYPE html>
 <html>
 <head>
