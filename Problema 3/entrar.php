@@ -6,7 +6,19 @@
 	<title>Entrar</title>
 </head>
 <body>
-	<form action="gerenciar.php" method="post">
+	
+<?php
+
+	session_start();
+
+
+	if ((array_key_exists("senha", $_SESSION)) && !(is_null($_SESSION['senha']))){
+		echo "Usuário ".$_SESSION['usuario'].' logado!<br><br><a href="sair.php">Sair</a>';
+		session_destroy();
+
+	}else{
+
+		echo '<form action="gerenciar.php" method="post">
 		Login: <br>
 		<input type="text" name="login"><br>
 		Senha: <br>
@@ -16,14 +28,14 @@
 		<p>admin && 1234</p><br>
 		<p>visit && 12345</p><br>
 		<p>colab && 123456</p><br>
-	</form>
-</body>
-</html>
+	';
 
-<?php 
+	}
 
-		$_SESSION['cont'] += 1;
 
 		
-
  ?>
+
+ </form>
+</body>
+</html>
